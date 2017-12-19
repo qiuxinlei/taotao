@@ -4,7 +4,9 @@ import com.taotao.pojo.TbOrderShipping;
 import com.taotao.pojo.TbOrderShippingExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TbOrderShippingMapper {
     long countByExample(TbOrderShippingExample example);
 

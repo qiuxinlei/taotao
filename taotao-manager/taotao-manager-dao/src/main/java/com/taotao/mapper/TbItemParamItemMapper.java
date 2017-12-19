@@ -4,7 +4,9 @@ import com.taotao.pojo.TbItemParamItem;
 import com.taotao.pojo.TbItemParamItemExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TbItemParamItemMapper {
     long countByExample(TbItemParamItemExample example);
 

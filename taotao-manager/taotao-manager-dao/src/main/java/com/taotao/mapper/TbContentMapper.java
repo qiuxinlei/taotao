@@ -4,7 +4,9 @@ import com.taotao.pojo.TbContent;
 import com.taotao.pojo.TbContentExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TbContentMapper {
     long countByExample(TbContentExample example);
 

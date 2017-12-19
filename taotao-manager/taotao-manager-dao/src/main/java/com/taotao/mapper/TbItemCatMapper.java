@@ -4,7 +4,9 @@ import com.taotao.pojo.TbItemCat;
 import com.taotao.pojo.TbItemCatExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TbItemCatMapper {
     long countByExample(TbItemCatExample example);
 

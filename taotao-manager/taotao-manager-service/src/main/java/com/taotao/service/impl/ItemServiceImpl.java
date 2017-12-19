@@ -17,7 +17,7 @@ import java.util.List;
 public class ItemServiceImpl implements ItemService{
 
     @Autowired
-    private TbItemMapper tbItemMapper;
+    private TbItemMapper itemMapper;
 
     @Override
     public TbItem getItemById(Long itemId) {
@@ -25,7 +25,7 @@ public class ItemServiceImpl implements ItemService{
         TbItemExample example = new TbItemExample();
         TbItemExample.Criteria criteria = example.createCriteria();
         criteria.andIdEqualTo(itemId);
-        List<TbItem> tbItems = tbItemMapper.selectByExample(example);
+        List<TbItem> tbItems = itemMapper.selectByExample(example);
         TbItem item = null;
         if(tbItems!=null && tbItems.size()>0){
             item = tbItems.get(0);
@@ -39,7 +39,7 @@ public class ItemServiceImpl implements ItemService{
         PageHelper.startPage(page,rows);
         //执行查询
         TbItemExample example = new TbItemExample();
-        List<TbItem> list = tbItemMapper.selectByExample(example);
+        List<TbItem> list = itemMapper.selectByExample(example);
         //取分页信息
         PageInfo<TbItem> pageInfo = new PageInfo<>(list);
         //处理分页信息

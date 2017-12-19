@@ -4,7 +4,9 @@ import com.taotao.pojo.TbOrder;
 import com.taotao.pojo.TbOrderExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TbOrderMapper {
     long countByExample(TbOrderExample example);
 

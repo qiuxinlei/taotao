@@ -4,7 +4,9 @@ import com.taotao.pojo.TbUser;
 import com.taotao.pojo.TbUserExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface TbUserMapper {
     long countByExample(TbUserExample example);
 
