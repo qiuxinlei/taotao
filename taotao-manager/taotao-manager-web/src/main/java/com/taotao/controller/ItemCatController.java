@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
-@RequestMapping(value = "/list/cat")
+@RequestMapping(value = "/item/cat")
 @Controller
 public class ItemCatController {
 
@@ -19,7 +19,7 @@ public class ItemCatController {
 
     @RequestMapping(value = "/list")
     @ResponseBody
-    public List<EasyUITreeNode> getItemCatList(@RequestParam(value = "id",required = false,defaultValue = "0") Long parentId){
+    public List<EasyUITreeNode> getItemCatList(@RequestParam(value = "id",defaultValue = "0") Long parentId){
         List<EasyUITreeNode> list = itemCatService.getItemCatList(parentId);
         return list;
     }

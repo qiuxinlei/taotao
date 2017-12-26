@@ -31,7 +31,7 @@ public class ItemCatServiceImpl implements ItemCatService{
             //创建一个节点对象
             EasyUITreeNode node = new EasyUITreeNode();
             node.setId(tbItemCat.getId());
-            node.setState(tbItemCat.getIsParent()?"close":"open");
+            node.setState(tbItemCat.getIsParent()?"closed":"open");
             node.setText(tbItemCat.getName());
             //添加到列表中
             resultList.add(node);
