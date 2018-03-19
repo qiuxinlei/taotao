@@ -21,7 +21,6 @@ public class PictureController {
     @ResponseBody
     public String uploadFile(@RequestParam(value = "uploadFile",required = false,defaultValue = "") MultipartFile uploadFile){
         PictureResult result = pictureService.uploadPic(uploadFile);
-        System.out.println(result);
         String json = JsonUtils.objectToJson(result);
         return json;
     }

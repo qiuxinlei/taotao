@@ -1,8 +1,10 @@
 package com.taotao.pojo;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class EasyUIDataGridResult {
+public class EasyUIDataGridResult implements Serializable{
+
     private long total;
     private List<?> rows;
 
