@@ -18,7 +18,6 @@ import java.util.List;
  * @Date 2018/3/23 10:00
  */
 @Service
-
 public class ContentServiceImpl implements ContentService {
     /*
     获得广告位的内容
@@ -29,6 +28,8 @@ public class ContentServiceImpl implements ContentService {
     private String REST_CONTENT_BASE_URL;
     @Value("${REST_CONTET_AD1_CID}")
     private String REST_CONTET_AD1_CID;
+
+
     @Override
     public String getAd1List() {
         //调用服务获得数据

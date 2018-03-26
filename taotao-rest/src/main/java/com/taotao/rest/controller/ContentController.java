@@ -34,7 +34,17 @@ public class ContentController {
         } catch (Exception e) {
             e.printStackTrace();
             return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
-        } finally {
+        }
+    }
+    @RequestMapping(value = "/sync/content/{cid}")
+    @ResponseBody
+    public TaotaoResult syncContent(@PathVariable  Long cid){
+        try {
+            TaotaoResult result = contentService.syncContent(cid);
+            return result;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return TaotaoResult.build(500,ExceptionUtil.getStackTrace(e));
         }
     }
 }
