@@ -24,7 +24,7 @@
 </head>
 <body id="mainframe">
 <!--shortcut start-->
-<jsp:include page="../../commons/shortcut.jsp" />
+<jsp:include page="./commons/shortcut.jsp" />
 <!--shortcut end-->
 	<form id="orderForm" class="hide">
 		<input type="hidden" name="paymentType" value="1"/>
@@ -44,7 +44,7 @@
 		<input type="hidden" name="orderShipping.receiverAddress" value="三鲁公路3279号 明浦广场 3号楼 205室 "/>
 	</form>
 	<div class="w w1 header clearfix">
-		<div id="logo"><a href="http://www.taotao.com/"><img src="/images/taotao-logo.gif" alt="淘淘商城" /></a></div>
+		<div id="logo"><a href="http://localhost:8082/"><img src="/images/taotao-logo.gif" alt="淘淘商城" /></a></div>
 		<div class="progress clearfix">
 			<ul class="progress-2">
 				<li class="s1"><b></b>1.我的购物车</li>
@@ -220,10 +220,10 @@
 				  <tr>
 				    <td class="fore1">
 					   <div class="p-goods">
-						  <div class="p-img"><a href="http://www.taotao.com/item/${item.id}.html" target='_blank'><img width="52" height="52" src="${item.images[0]}"></a></div>
+						  <div class="p-img"><a href="http://localhost:8082/item/${item.id}.html" target='_blank'><img width="52" height="52" src="${item.images[0]}"></a></div>
 							 <div class="p-detail">
 								<div class="p-name">
-									<a href="http://www.taotao.com/item/${item.id}.html" target='_blank'>
+									<a href="http://localhost:8082/item/${item.id}.html" target='_blank'>
 										${item.title }
 								    </a>
 								</div>

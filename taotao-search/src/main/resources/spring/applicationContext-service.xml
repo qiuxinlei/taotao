@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tool="http://www.springframework.org/schema/tool"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/aop 	http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+	http://www.springframework.org/schema/context 	http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/mvc 	http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+	http://www.springframework.org/schema/tool 	http://www.springframework.org/schema/tool/spring-tool-4.2.xsd
+	http://www.springframework.org/schema/tx 	http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+	http://www.springframework.org/schema/util 	http://www.springframework.org/schema/util/spring-util-4.2.xsd ">
+
+    <context:component-scan base-package="com.taotao.search.service,com.taotao.search.dao"/>
+    <!--单机版solr-->
+    <!--<bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">-->
+        <!--<constructor-arg name="baseURL" value="http://192.168.241.162:8080/solr/collection1"/>-->
+    <!--</bean>-->
+    <!--集群版solr-->
+    <bean id="cloudSolrServer" class="org.apache.solr.client.solrj.impl.CloudSolrServer">
+        <constructor-arg value="192.168.241.162:2181,192.168.241.162:2182,192.168.241.162:2183" name="zkHost"/>
+        <property name="defaultCollection" value="collection2"/>
+    </bean>
+</beans>

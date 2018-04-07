@@ -10,6 +10,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -18,6 +19,8 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -39,18 +42,34 @@ public class HttpClientUtil {
      * @param url
      * @return
      */
-    public static String get(String url) {
+    public static String get(String url){
+        return get(url,null);
+    }
+    /**
+     * 发送get请求
+     * @param url
+     * @param params
+     * @return
+     */
+    public static String get(String url, Map<String, String> params) {
         String res = null;
         CloseableHttpClient httpClient = HttpClients.createDefault();
         try {
-            HttpGet httpGet = new HttpGet(url);
+            HttpGet httpGet = httpGetHandler(url,params);
             res = execute(httpClient, httpGet);
         } finally {
             doHttpClientClose(httpClient);
         }
         return res;
     }
-
+    /**
+     * 发送post请求
+     * @param url    post url
+     * @return
+     */
+    public static String post(String url){
+        return post(url,null);
+    }
     /**
      * 发送post请求
      * @param url    post url
@@ -120,15 +139,33 @@ public class HttpClientUtil {
         }
         return res;
     }
-
+    private static HttpGet httpGetHandler(String url, Map<String, String> params){
+        HttpGet httpGet = null;
+        try {
+            URIBuilder builder = new URIBuilder(url);
+            if(params!=null){
+               for(String key : params.keySet()){
+                   builder.addParameter(key,params.get(key));
+               }
+            }
+            URI uri = builder.build();
+            //创建httpGet请求
+            httpGet = new HttpGet(uri);
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+        return httpGet;
+    }
     private static HttpPost httpPostHandler(String url, Map<String, String> params) {
         HttpPost httpPost = new HttpPost(url);
-        List<NameValuePair> nvps = new ArrayList<>();
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            nvps.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
-        }
         try {
-            httpPost.setEntity(new UrlEncodedFormEntity(nvps, CHARSET_UTF_8));
+            if(params!=null){
+                List<NameValuePair> nvps = new ArrayList<>();
+                for (Map.Entry<String, String> entry : params.entrySet()) {
+                    nvps.add(new BasicNameValuePair(entry.getKey(), entry.getValue()));
+                }
+                httpPost.setEntity(new UrlEncodedFormEntity(nvps, CHARSET_UTF_8));
+            }
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
