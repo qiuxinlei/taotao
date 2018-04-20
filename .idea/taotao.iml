@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/taotao-sso/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-sso/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-common/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-common/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-manager/taotao-manager-dao/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-manager/taotao-manager-pojo/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-manager/taotao-manager-pojo/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-manager/taotao-manager-service/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-manager/taotao-manager-service/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-manager/taotao-manager-web/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-manager/taotao-manager-web/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-parent/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-portal/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-portal/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-rest/src/main/java/com/taotao/rest" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-rest/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-rest/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-search/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/taotao-search/src/main/resources" type="java-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
