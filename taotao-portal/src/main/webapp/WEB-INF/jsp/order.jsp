@@ -302,7 +302,7 @@
    <div class="w">
 
 	<!-- links start -->
-    <jsp:include page="../../commons/footer-links.jsp"></jsp:include>
+    <jsp:include page="../../commons/footer-links.ftl"></jsp:include>
     <!-- links end -->
 </div><!-- footer end -->
 	<script type="text/javascript" src="/js/order.js"></script>

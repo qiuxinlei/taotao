@@ -68,6 +68,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:4.3.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.8.9" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.3.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: jstl:jstl:1.2" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:jsp-api:2.0" level="project" />
@@ -80,5 +81,6 @@
     <orderEntry type="library" name="Maven: org.codehaus.woodstox:wstx-asl:3.2.7" level="project" />
     <orderEntry type="library" name="Maven: org.noggit:noggit:0.5" level="project" />
     <orderEntry type="library" name="Maven: net.oschina.zcx7878:fastdfs-client-java:1.27.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.23" level="project" />
   </component>
 </module>

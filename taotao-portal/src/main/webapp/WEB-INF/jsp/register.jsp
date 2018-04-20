@@ -75,7 +75,7 @@ function addToFavorite() {
     }
 }</script>
 <!--shortcut start-->
-<jsp:include page="../../commons/shortcut.jsp" />
+<jsp:include page="../../commons/shortcut.ftl" />
 <!--shortcut end-->
 <div class="w" id="logo">
     <div>
@@ -266,7 +266,7 @@ function addToFavorite() {
     })(jQuery);</script>
 <div class="w">
 	<!-- links start -->
-    <jsp:include page="../../commons/footer-links.jsp"></jsp:include>
+    <jsp:include page="../../commons/footer-links.ftl"></jsp:include>
     <!-- links end -->
 </div>
 <script type="text/javascript" src="/js/register/jd.lib.js"></script>

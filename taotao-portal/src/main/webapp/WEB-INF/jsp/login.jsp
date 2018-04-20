@@ -183,7 +183,7 @@
 </div>
 <div class="w">
 	<!-- links start -->
-    <jsp:include page="../../commons/footer-links.jsp"></jsp:include>
+    <jsp:include page="../../commons/footer-links.ftl"></jsp:include>
     <!-- links end -->
 </div>
 <script type="text/javascript" src="/js/login/login.js"></script>
