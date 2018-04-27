@@ -405,7 +405,7 @@
 
     function addCart() {
         //去购物车商品数量
-        let num = $("#buy-num").val();
+        var num = $("#buy-num").val();
         window.location.href = "/cart/add/${item.id}.html" + "?num=" + num;
     }
 </script>
